@@ -35,9 +35,9 @@ struct CoffeeShop {
         }
     }
     
-    var pickUpTable: String? {
+    var pickUpTable: String = "" {
         didSet {
-            if let pickUpTable = pickUpTable {
+            if pickUpTable.count > 0 {
                 print("\(pickUpTable)님의 커피가 준비되었습니다. 픽업대에서 가져가주세요.")
             }
         }
